@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     np.random.seed(0)
 
-    parsed_args = json.loads(sys.argv[1])
+    parsed_args = json.loads(sys.stdin.read())
 
     if parsed_args["input"]["local0"]["computation_phase"] == 'local_noop':
         computation_output = remote_1(parsed_args)

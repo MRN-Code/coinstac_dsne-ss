@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
     np.random.seed(0)
 
-    parsed_args = json.loads(sys.argv[1])
+    parsed_args = json.loads(sys.stdin.read())
     if "computation_phase" not in list(get_all_keys(parsed_args)):
         computation_output = local_noop(parsed_args)
         sys.stdout.write(computation_output)
